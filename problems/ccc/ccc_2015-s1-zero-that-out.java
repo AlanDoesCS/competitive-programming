@@ -60,11 +60,9 @@ import java.util.Scanner;
 import java.util.Stack;
 
 class S1_Zero_That_Out extends Challenge {
-
     public static void main(String[] args) {
         Stack<Integer> inputStack = new Stack<>();
         Scanner scanner = new Scanner(System.in);
-
         String current_raw = scanner.nextLine();
         int sum = 0;
 
@@ -84,10 +82,11 @@ class S1_Zero_That_Out extends Challenge {
                 inputStack.push(current);
                 //System.out.println("Added:" + current);
             }
-            //System.out.println("New Sum:" + sum);
+            //System.out.println("Current Sum:" + sum);
             current_raw = scanner.nextLine();
         }
-        System.out.println("Final sum:" + sum);
 
+        // Final sum
+        System.out.println(sum);
     }
 }
