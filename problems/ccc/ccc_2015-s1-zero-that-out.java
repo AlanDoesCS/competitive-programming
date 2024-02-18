@@ -63,12 +63,12 @@ class S1_Zero_That_Out extends Challenge {
     public static void main(String[] args) {
         Stack<Integer> inputStack = new Stack<>();
         Scanner scanner = new Scanner(System.in);
-        String current_raw = scanner.nextLine();
+        int number_of_lines = scanner.nextInt();
         int sum = 0;
 
-        while (!current_raw.isEmpty())
+        for (int i=0; i<number_of_lines; i++)
         {
-            int current = Integer.parseInt(current_raw);
+            int current = scanner.nextInt();
 
             if (current == 0)
             {
@@ -83,7 +83,6 @@ class S1_Zero_That_Out extends Challenge {
                 //System.out.println("Added:" + current);
             }
             //System.out.println("Current Sum:" + sum);
-            current_raw = scanner.nextLine();
         }
 
         // Final sum
