@@ -54,11 +54,9 @@ Output for Sample Input 2
 */
 
 
-import CCC.Challenge;
-
 import java.util.ArrayList;
 import java.util.Scanner;
-class S1_Trianglane extends Challenge {
+class S1_Trianglane {
     static ArrayList<Triangle> wetList = new ArrayList<>();
     static Triangle[][] all_triangles;
     final int UP = 1;
