@@ -6,7 +6,6 @@ class S1_Good_Fours_and_Good_Fives
     public static void main(String[] args) {
         // 4a + 5b = N
         Scanner scan = new Scanner(System.in);
-
         int N = Integer.parseInt(scan.nextLine());
 
         int possible = 0;
@@ -17,7 +16,6 @@ class S1_Good_Fours_and_Good_Fives
                 }
             }
         }
-
         System.out.println(possible);
     }
 }
