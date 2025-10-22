@@ -44,22 +44,27 @@ int main()
 
     while (t--)
     {
-        int y, x;
+        long long y, x;
 
         cin >> y >> x;
 
-        int loop = max(y, x);
-        long long square = static_cast<long long>(loop) * static_cast<long long>(loop);
+        const long long loop = max(y, x);
+        const long long square = 1LL * loop * loop;
 
         // if even, the square occurs on the left, if odd, the square occurs on the right
-        pair<int, int> square_loc = (loop % 2 == 0)
-            ? pair<int, int>{loop, 1}
-            : pair<int, int>{1, loop};
 
         // find number of steps from square
-        int steps = abs(square_loc.first - y) + abs(square_loc.second - x);
+        long long steps;
+        if (loop % 2 == 0)
+        {
+            steps = (loop - y) + (x - 1);
+        }
+        else
+        {
+            steps = (y - 1) + (loop - x);
+        }
 
-        cout << square + -steps << '\n';
+        cout << square-steps << '\n';
     }
 
     return 0;
