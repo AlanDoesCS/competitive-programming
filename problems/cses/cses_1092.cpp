@@ -78,40 +78,29 @@ int main()
         // S_1
         cout << n / 2 << "\n";
 
-        for (int i=1; i<n-4; i+=4) // increment in steps of 4 -- i is the first integer in the grouping
-        {
-            cout << i << ' ' << i+3 << ' ';
-        }
-        cout << n-3 << ' ' << n << "\n";
+        // increment in steps of 4 -- i is the first integer in the grouping
+        for (int i=1; i<=n; i+=4) cout << i << ' ' << i+3 << ' ';
+        cout << "\n";
 
         // S_2
         cout << n / 2 << "\n";
-        for (int i=1; i<n-4; i+=4)
-        {
-            cout << i+1 << ' ' << i+2 << ' ';
-        }
-        cout << n-2 << ' ' << n-1 << "\n";
+
+        for (int i=1; i<=n; i+=4) cout << i+1 << ' ' << i+2 << ' ';
+        cout << "\n";
 
     } else if (n % 4 == 3)
     {
         cout << "YES\n";
         // S_1
-        cout << (n-3) / 2 + 2 << "\n" << "1 2 ";
+        cout << (n+1) / 2 << "\n" << "1 2 ";
 
-        for (int i=4; i<n-4; i+=4) // same as before, just start at an offset of 3
-        {
-            cout << i << ' ' << i+3 << ' ';
-        }
-        if (n != 3) cout << n-3 << ' ' << n;
+        // same as before, just start at an offset of 3
+        for (int i=4; i<=n; i+=4) cout << i << ' ' << i+3 << ' ';
         cout << '\n';
 
         // S_2
-        cout << (n-3) / 2 + 1 << "\n" << "3 ";
-        for (int i=4; i<n-4; i+=4) // same as before, just start at an offset of 3
-        {
-            cout << i+1 << ' ' << i+2 << ' ';
-        }
-        if (n != 3)  cout << n-2 << ' ' << n-1;
+        cout << (n-1) / 2 << "\n" << "3 ";
+        for (int i=4; i<=n; i+=4) cout << i+1 << ' ' << i+2 << ' ';
         cout << "\n";
 
     } else cout << "NO\n";
