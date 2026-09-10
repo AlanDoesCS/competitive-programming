@@ -3,6 +3,9 @@ CMakeLists.txt
 # Prerequisites
 *.d
 
+# Compiled Java classes
+*.class
+
 # Compiled Object files
 *.slo
 *.lo
